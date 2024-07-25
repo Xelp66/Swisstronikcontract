@@ -1,0 +1,158 @@
+# area id
+#
+# type: string
+# env var: TITAN__AREAID
+AreaID = "Europe-Germany-Hesse-FrankfurtamMain"
+
+# used auth when connect to scheduler
+#
+# type: string
+# env var: TITAN__SECRET
+#Secret = ""
+
+# InsecureSkipVerify http3 client skip tls verify
+#
+# type: bool
+# env var: TITAN__INSECURESKIPVERIFY
+#InsecureSkipVerify = true
+
+# used for http3 server
+# be used if InsecureSkipVerify is true
+#
+# type: string
+# env var: TITAN__CERTIFICATEPATH
+#CertificatePath = ""
+
+# used for http3 server
+# be used if InsecureSkipVerify is true
+#
+# type: string
+# env var: TITAN__PRIVATEKEYPATH
+#PrivateKeyPath = ""
+
+# self sign certificate, use for client
+#
+# type: string
+# env var: TITAN__CACERTIFICATEPATH
+#CaCertificatePath = ""
+
+# type: string
+# env var: TITAN__TCPSRVADDR
+#TCPSrvAddr = ""
+
+# type: string
+# env var: TITAN__IPFSAPIURL
+#IPFSAPIURL = ""
+
+# seconds
+#
+# type: int
+# env var: TITAN__VALIDATEDURATION
+#ValidateDuration = 0
+
+# type: int
+# env var: TITAN__MAXSIZEOFUPLOADFILE
+#MaxSizeOfUploadFile = 0
+
+
+[Network]
+  # host address and port the edge node api will listen on
+  #
+  # type: string
+  # env var: TITAN_NETWORK_LISTENADDRESS
+  #ListenAddress = "0.0.0.0:1234"
+
+  # used when 'ListenAddress' is unspecified. must be a valid duration recognized by golang's time.ParseDuration function
+  #
+  # type: string
+  # env var: TITAN_NETWORK_TIMEOUT
+  #Timeout = "30s"
+
+  # the url of locator
+  #
+  # type: string
+  # env var: TITAN_NETWORK_LOCATORURL
+  LocatorURL = "https://cassini-locator.titannet.io:5000/rpc/v0"
+
+
+[Puller]
+  # PullBlockTimeout get block timeout
+  #
+  # type: int
+  # env var: TITAN_PULLER_PULLBLOCKTIMEOUT
+  #PullBlockTimeout = 180
+
+  # PullBlockRetry retry when get block failed
+  #
+  # type: int
+  # env var: TITAN_PULLER_PULLBLOCKRETRY
+  #PullBlockRetry = 5
+
+  # PullBlockParallel the number of goroutine to pull block
+  #
+  # type: int
+  # env var: TITAN_PULLER_PULLBLOCKPARALLEL
+  #PullBlockParallel = 5
+
+
+[Bandwidth]
+  # unit is MiB/s, 0 means no limit
+  #
+  # type: int64
+  # env var: TITAN_BANDWIDTH_BANDWIDTHMB
+  #BandwidthMB = 0
+
+  # upload file bandwidth, unit is MiB/s, 0 means no limit
+  #
+  # type: int64
+  # env var: TITAN_BANDWIDTH_BANDWIDTHUP
+  #BandwidthUp = 0
+
+  # download file bandwidth, unit is MiB/s, 0 means no limit
+  #
+  # type: int64
+  # env var: TITAN_BANDWIDTH_BANDWIDTHDOWN
+  #BandwidthDown = 0
+
+
+[Netflow]
+  # upload network flow limit, unit is GB, 0 means no limit
+  #
+  # type: int64
+  # env var: TITAN_NETFLOW_NETFLOWUP
+  #NetflowUp = 0
+
+  # download network flow limit, unit is GB, 0 means no limit
+  #
+  # type: int64
+  # env var: TITAN_NETFLOW_NETFLOWDOWN
+  #NetflowDown = 0
+
+
+[Storage]
+  # type: int64
+  # env var: TITAN_STORAGE_STORAGEGB
+  #StorageGB = 2
+
+  # type: string
+  # env var: TITAN_STORAGE_PATH
+  #Path = ""
+
+
+[Memory]
+  # type: int64
+  # env var: TITAN_MEMORY_MEMORYGB
+  #MemoryGB = 1
+
+
+[CPU]
+  # type: int
+  # env var: TITAN_CPU_CORES
+  #Cores = 1
+
+
+[Basic]
+  # type: string
+  # env var: TITAN_BASIC_TOKEN
+  Token = "eyJub2RlX2lkIjoiZV8wOTllMDUxYi1jMmFjLTQzOWYtOTFjMS04MDcwNTIzNzBiMjQiLCJhcmVhX2lkIjoiRXVyb3BlLUdlcm1hbnktSGVzc2UtRnJhbmtmdXJ0YW1NYWluIiwiYWN0aXZhdGlvbl9rZXkiOiIwY2I3NWE4OWNiMGM2NTAzMjFjYjVjZWEzNDkxYjQzNiIsIm5vZGVfdHlwZSI6MSwiaXAiOiIxMjguMTQwLjUzLjIwMyJ9"
+
